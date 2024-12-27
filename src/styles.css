@@ -40,6 +40,14 @@ footer{
   gap: 1rem;
 }
 
+.medium-gap{
+  gap: 2rem;
+}
+
+.large-gap{
+  gap: 3rem;
+}
+
 .wrap{
   flex-wrap: wrap;
 }
@@ -65,6 +73,13 @@ footer{
 .mh{
   margin: 0 auto;
 }
+.left{
+  margin-left: auto;
+}
+.bottom{
+  margin-top: auto;
+}
+
 
 /* images */
 .icon-small{
@@ -83,6 +98,10 @@ footer{
 /* color */
 .white{
   color: white;
+}
+
+.gray{
+  color: gray;
 }
 
 /* paddings */
@@ -129,6 +148,41 @@ picture, picture > img{
   max-width: min(624px, 100%);
 }
 
+main{
+  padding: 4rem 2rem;
+}
+
+.projects{
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.project{
+  box-shadow: 0px 0px 0.5rem 0px rgb(163, 163, 163);
+}
+
+.img-container{
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* project media queries */
+@media (min-width:600px){
+  .projects{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width:900px){
+  .projects{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+
+/* footer media queries */
 @media (max-width:425px){
   .footer{
     grid-template-columns: 1fr;
@@ -139,7 +193,7 @@ picture, picture > img{
     padding: 0 2rem;
   }
 
-  .footer h2{
+  h2{
     text-align: center;
   }
 
@@ -154,4 +208,25 @@ picture, picture > img{
   .footer > div div:last-of-type{
     justify-content: center;
   }
+}
+
+/* project images */
+.dashboard{
+  background-image: url(./project-images/dashboard.png);
+}
+
+.weather{
+  background-image: url(./project-images/weather.png);
+}
+
+.todo{
+  background-image: url(./project-images/todo.png);
+}
+
+.restaurant{
+  background-image: url(./project-images/restaurant.png);
+}
+
+.library{
+  background-image: url(./project-images/library.png);
 }
